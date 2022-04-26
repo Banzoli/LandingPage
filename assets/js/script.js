@@ -1,4 +1,4 @@
-let nome = window.document.getElementById('nome')
+let nome = document.querySelector('#nome')
 let email = document.querySelector('#email')
 let assunto = document.querySelector('#assunto')
 let nomeOk = false
@@ -11,10 +11,9 @@ email.style.width = '100%'
 assunto.style.width = '100%'
 
 function validaNome() {
-
-    let txtNome = document.querySelector('#txtNome')
-    if (nome.value.length < 3) {
-        txtNome.innerHTML = 'Nome Invalido'
+    let txtNome = document.querySelector('txtNome')
+    if (nome.value.length <= 2) {
+        txtNome.innerHTML = "Nome invalido"
         txtNome.style.color = 'red'
     }else {
         txtNome.innerHTML = 'Nome valido'
